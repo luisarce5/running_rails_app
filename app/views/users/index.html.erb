@@ -1,0 +1,16 @@
+<!-- <%= stylesheet_link_tag("style.css") %> -->
+
+<div class = 'navigation_bar' >
+  <%= link_to "Home Page", root_path%>
+<div>
+
+
+<h2> Index of User Profiles </h2>
+
+  <% @users.each do |user| %>
+  <div class="user_profile">
+    <h3> <%= link_to "Profile of: #{user.user_name}", user_path(user) %> </h3>
+    <p>  User Description: <%= user.user_description %> </p>
+    <p> City: <%= user.city %> </p>
+  </div>
+  <% end %>
