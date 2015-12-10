@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     resources :runs
   end
 
-  # get /'login' => 'sessions#new'
-  # get /'login' => 'sessions#create'
-  # get /'logout' => 'sessions#destroy'
+  get /'login' => 'sessions#new'
+  get /'login' => 'sessions#create'
+  get /'logout' => 'sessions#destroy'
 
 end
   # The priority is based upon order of creation: first created -> highest priority.
