@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :authorize, except: [welcome, :new, :create]
+  before_action :authorize, except: [:welcome, :new, :create]
 
   def welcome
     @users = User.all

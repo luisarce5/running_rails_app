@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  def new #loging form
+  def new #login  form
   end
 
   def create
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy #logout
     session[:user_id] = nil
-    redirect_to('/'
+    redirect_to('/')
   end
 
 end
