@@ -1,6 +1,6 @@
 class RunsController < ApplicationController
 
-  before_action :authorize
+  # before_action :authorize
 
   def index
     @runs = Loan.all
@@ -8,12 +8,16 @@ class RunsController < ApplicationController
   end
 
   def show
+    @run = Run.find(params[:id])
+  end
+
+  def new
     @run = Run.new
   end
 
   def create
     run = Run.create(run_params)
-    run.user_id = current_user.# IDEA:
+    run.user_id = current_user.id
     if run.save
       redirect_to '/runs'
     else
@@ -22,7 +26,7 @@ class RunsController < ApplicationController
   end
 
   def edit
-    @run = Rund.find(params[:id])
+    @run = Run.find(params[:id])
   end
 
   def update
@@ -40,7 +44,7 @@ class RunsController < ApplicationController
     redirect_to '/runs'
   end
 
-  private
+  # private
 
   def run_params
     params.require(:run).permit(

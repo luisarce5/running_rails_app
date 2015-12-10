@@ -10,9 +10,10 @@
 
 <%= render partial: 'users/run', collection: @user.runs %>
 
+
 <%= link_to 'Edit', edit_user_path(@user) %> ||
 <%= link_to 'Back to Users Index', users_path %> ||
 <%= link_to 'Delete', user_path(@user),
     method: :delete,
-    data: { confirm: 'Are you sure? Delete is permanent.  Please confirm.'} %> ||
+    data: { confirm: 'Are you sure you want to delete your Profile? Delete is permanent.  Please confirm.'} %> ||
 <%= link_to "Post New Run", new_user_run_path(@user) %>

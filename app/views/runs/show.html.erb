@@ -1,0 +1,21 @@
+<div class = 'run_profile'>
+
+  <h2> Run Workout Details </h2>
+
+  <p> <strong> date       </strong> <%= @run.date %> </p>
+  <p> <strong> distance   </strong> <%= @run.distance %> </p>
+  <p> <strong> start_time </strong> <%= @run.start_time %> </p>
+  <p> <strong> duration   </strong> <%= @run.duration %> </p>
+  <p> <strong> route      </strong> <%= @run.route %> </p>
+  <p> <strong> run_type   </strong> <%= @run.run_type %> </p>
+  <p> <strong> comments   </strong> <%= @run.comments %> </p>
+  <p> <strong> shoes      </strong> <%= @run.shoes %> </p>
+  <p> <%= f.submit %> </p>
+
+</div>
+
+<%= link_to 'Edit', edit_run_path(@run) %> ||
+<%= link_to 'Delete', run_path(@run),
+    method: :delete,
+    data: {confirm: 'Are you sure? Delete is permanent.  Please confirm.'} %>
+    
