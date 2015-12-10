@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
 
   def create
     # user puts in email and password
-    user = User.find_by_user_name(params[:user_name])
-    # do not be concerted about requiring strong parameters since we are not saving to database
-    if user && user.authenticate(params[:password])
-      # authenticate with bcrypt
+    # create a new session if they match
+    user = User.find_by_user_name(params[:user_name]) # do not worry about strong params because we are not putting it into database
+    # binding.pry
+    if user && user.authenticate(params[:password]) #authenticate is a bcrypt method
       session[:user_id] = user.id
       redirect_to("/")
 
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy #logout
+  def destroy # logout
     session[:user_id] = nil
     redirect_to('/')
   end
