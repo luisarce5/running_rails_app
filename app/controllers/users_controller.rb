@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  # before_action :authorize, except: [welcome, :new, :create]
+  before_action :authorize, except: [welcome, :new, :create]
 
   def welcome
     @users = User.all
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  # private
+  private
 
   def user_params
     params.require(:user).permit(

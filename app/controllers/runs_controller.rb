@@ -1,6 +1,6 @@
 class RunsController < ApplicationController
 
-  # before_action :authorize
+  before_action :authorize
 
   def index
     @runs = Loan.all
@@ -44,7 +44,7 @@ class RunsController < ApplicationController
     redirect_to '/runs'
   end
 
-  # private
+  private
 
   def run_params
     params.require(:run).permit(
