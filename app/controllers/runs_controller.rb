@@ -13,6 +13,7 @@ class RunsController < ApplicationController
 
   def new
     @run = Run.new
+    @user = current_user
   end
 
   def create

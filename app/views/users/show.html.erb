@@ -16,6 +16,7 @@
 
 <table style = "width:100%">
     <tr>
+      <td> <strong> Details </strong> </td>
       <td> <strong> Date </strong> </td>
       <td> <strong> Distance </strong> </td>
       <td> <strong> Duration </strong> </td>
@@ -25,6 +26,7 @@
 
     <% @user.runs.each do |run| %>
     <tr>
+      <td> <%= link_to 'Edit User Profile', edit_user_path(@user)  %> </td>
       <td> <%= run.date %> </td>
       <td> <%= run.distance %> </td>
       <td> <%= run.duration %> </td>
