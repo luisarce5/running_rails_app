@@ -26,7 +26,7 @@
 
     <% @user.runs.each do |run| %>
     <tr>
-      <td> <%= link_to 'Edit User Profile', edit_user_path(@user)  %> </td>
+      <td> <%= link_to 'View Run Details', user_run_path(@user, run)  %> </td>
       <td> <%= run.date %> </td>
       <td> <%= run.distance %> </td>
       <td> <%= run.duration %> </td>

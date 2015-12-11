@@ -9,6 +9,7 @@ class RunsController < ApplicationController
 
   def show
     @run = Run.find(params[:id])
+    @user = current_user
   end
 
   def new
