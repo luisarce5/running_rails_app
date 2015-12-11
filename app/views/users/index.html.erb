@@ -9,8 +9,8 @@
 
   <% @users.each do |user| %>
   <div class="user_profile">
-    <h3> <%= link_to "Profile of: #{user.user_name}", user_path(user) %> </h3>
-    <p>  User Description: <%= user.user_description %> </p>
-    <p> City: <%= user.city %> </p>
+    <h3> <%= link_to "View complete profile of: #{user.user_name}", user_path(user) %> </h3>
+    <p> <strong>  User Description: </strong> <%= user.user_description %> </p>
+    <p> <strong> City: </strong> <%= user.city %> </p>
   </div>
   <% end %>
