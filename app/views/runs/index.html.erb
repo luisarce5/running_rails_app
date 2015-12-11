@@ -3,11 +3,3 @@
   <%= link_to "User Profiles", users_path %> ||
   <%= link_to "Post New Run", new_run_path %> }}
 </div>
-
-<h2> Runs of All Users ??? </h2>
-
-  <% @runs.each do |run| %>
-  <div class="runs">
-    <p> <strong> Username: </strong> <%= run.user.user_name %> </p>
-  </div>
-  <% end %>

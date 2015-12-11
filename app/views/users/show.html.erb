@@ -10,7 +10,7 @@
 
 <h3> Your Log of Runs before 'render partial'</h3>
 
-<%= render partial: 'users/run', collection: @user.runs %>
+<!-- <%= render partial: 'users/run', collection: @user.runs %> -->
 
 <p> Here is the section </p>
 
@@ -32,12 +32,12 @@
       <td> <%= run.comments %> </td>
     </tr>
     <% end %>
-    
+
   </table>
 
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> ||
+<%= link_to 'Edit User Profile', edit_user_path(@user) %> ||
 <%= link_to 'Back to Users Index', users_path %> ||
 <%= link_to 'Delete', user_path(@user),
     method: :delete,
