@@ -1,16 +1,16 @@
+<h3> Log details of your Run Workout </h3>
+
 <%= form_for @run, url: "/runs"  do |f| %>
 
-<p> <%= f.label :date%><br> <%= f.text_field :date %> </p>
-<p> <%= f.label :distance%><br><%= f.text_field :distance %> </p>
-<p> <%= f.label :start_time%><br><%= f.text_field :start_time %> </p>
-<p> <%= f.label :duration%><br><%= f.text_field :duration %> </p>
-<p> <%= f.label :route%><br><%= f.text_field :route %> </p>
-<p> <%= f.label :run_type%><br><%= f.text_field :run_type %> </p>
-<p> <%= f.label :comments%><br><%= f.text_area :comments, size: "60x12" %> </p>
-<p> <%= f.label :shoes%><br><%= f.text_field :shoes%> </p>
-<p> <%= f.submit %> </p>
+<p> <%= f.label :date       %><br> <%= f.text_field :date %> </p>
+<p> <%= f.label :distance   %><br> <%= f.text_field :distance %> </p>
+<p> <%= f.label :start_time %><br> <%= f.text_field :start_time %> </p>
+<p> <%= f.label :duration   %><br> <%= f.text_field :duration %> </p>
+<p> <%= f.label :route      %><br> <%= f.text_field :route %> </p>
+<p> <%= f.label :run_type   %><br> <%= f.text_field :run_type %> </p>
+<p> <%= f.label :comments   %><br> <%= f.text_area :comments, size: "60x12" %> </p>
+<p> <%= f.label :shoes      %><br> <%= f.text_field :shoes%> </p>
 
 <%= f.submit "Submit New Run Workout Details" %>
-
 
 <% end %>

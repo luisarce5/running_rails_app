@@ -1,12 +1,21 @@
 <div class = "runs">
-  <h3> <%= link_to "Run Log Details", run_path(run) %> </h3>
 
-  <p> <strong> Date: </strong> <%= run.date %> </p>
-  <p> <strong> Distance: </strong> <%= run.distance %> </p>
-  <p> <strong> Duration: </strong> <%= run.duration %> </p>
-  <p> <strong> Pace: </strong> <%= run.pace %> </p>
-  <p> <strong> Route: </strong> <%= run.route %> </p>
-  <p> <strong> Comments: </strong> <%= run.comments %> </p>
-  <p> <strong> Shoes: </strong> <%= run.shoes %> </p>
+    <table style = "width:100%">
+      <tr>
+        <td> <strong> Date </strong> </td>
+        <td> <strong> Distance </strong> </td>
+        <td> <strong> Duration </strong> </td>
+        <td> <strong> Route </strong> </td>
+        <td> <strong> Comments </strong> </td>
+      </tr>
+
+      <tr>
+        <td> <%= run.date %> </td>
+        <td> <%= run.distance %> </td>
+        <td> <%= run.duration %> </td>
+        <td> <%= run.route %> </td>
+        <td> <%= run.comments %> </td>
+      </tr>
+    </table>
 
 </div>

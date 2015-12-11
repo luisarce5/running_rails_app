@@ -4,10 +4,10 @@
   <%= link_to "Post New Run", new_run_path %> }}
 </div>
 
-<h2> Runs of All Users </h2>
-  <%= @runs.each do |run| %>
+<h2> Runs of All Users ??? </h2>
+
+  <% @runs.each do |run| %>
   <div class="runs">
-    <h3> <%= link_to "Run Profile Details" run_path(loan) %> </h3>
-    <p> <strong> User name: </strong> <%= run.user.user_name %> <p>
+    <p> <strong> Username: </strong> <%= run.user.user_name %> </p>
   </div>
-  <% end %>    
+  <% end %>

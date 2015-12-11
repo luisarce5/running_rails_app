@@ -3,7 +3,7 @@ class RunsController < ApplicationController
   before_action :authorize
 
   def index
-    @runs = Loan.all
+    @runs = Run.all
     # pending to add search function
   end
 

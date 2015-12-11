@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method(:current_user)
-  # this calls the helper methos on User when the action loands
+  # this calls the helper methos on User when the action loads
 
   def authorize
     redirect_to '/login' unless current_user

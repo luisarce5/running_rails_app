@@ -8,8 +8,9 @@
 
 </div>
 
-<%= render partial: 'users/run', collection: @user.runs %>
+<h3> Your Log of Runs before 'render partial'</h3>
 
+<%= render partial: 'users/run', collection: @user.runs %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> ||
 <%= link_to 'Back to Users Index', users_path %> ||
