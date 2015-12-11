@@ -12,8 +12,11 @@
 
 </div>
 
-<%= link_to 'Edit', edit_run_path(@run) %> ||
-<%= link_to 'Delete', run_path(@run),
-    method: :delete,
-    data: {confirm: 'Are you sure? Delete is permanent.  Please confirm.'} %> ||
- <%= link_to 'See User Profile', user_path(@user)%>
+
+<div class = 'navigation_bar'>
+  <%= link_to 'Edit Run', edit_run_path(@run) %> ||
+  <%= link_to 'Delete Run', run_path(@run),
+      method: :delete,
+      data: {confirm: 'Are you sure? Delete is permanent.  Please confirm.'} %> ||
+   <%= link_to 'See User Profile', user_path(@user)%>
+</div>

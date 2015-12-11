@@ -8,40 +8,42 @@
 
 </div>
 
-<h3> Your Log of Runs before 'render partial'</h3>
+<h3> Your Log of Runs </h3>
 <p> <strong> <%= link_to "Post New Run", new_user_run_path(@user) %> </strong> </p>
 
 <!-- <%= render partial: 'users/run', collection: @user.runs %> -->
 
+<div class="runs">
+  <table style = "width:100%">
+      <tr>
+        <td> <strong> Details </strong> </td>
+        <td> <strong> Date </strong> </td>
+        <td> <strong> Distance </strong> </td>
+        <td> <strong> Duration </strong> </td>
+        <td> <strong> Route </strong> </td>
+        <td> <strong> Comments </strong> </td>
+      </tr>
 
-<table style = "width:100%">
-    <tr>
-      <td> <strong> Details </strong> </td>
-      <td> <strong> Date </strong> </td>
-      <td> <strong> Distance </strong> </td>
-      <td> <strong> Duration </strong> </td>
-      <td> <strong> Route </strong> </td>
-      <td> <strong> Comments </strong> </td>
-    </tr>
+      <% @user.runs.each do |run| %>
+      <tr>
+        <td> <%= link_to 'View Run Details', user_run_path(@user, run)  %> </td>
+        <td> <%= run.date %> </td>
+        <td> <%= run.distance %> </td>
+        <td> <%= run.duration %> </td>
+        <td> <%= run.route %> </td>
+        <td> <%= run.comments %> </td>
+      </tr>
+      <% end %>
 
-    <% @user.runs.each do |run| %>
-    <tr>
-      <td> <%= link_to 'View Run Details', user_run_path(@user, run)  %> </td>
-      <td> <%= run.date %> </td>
-      <td> <%= run.distance %> </td>
-      <td> <%= run.duration %> </td>
-      <td> <%= run.route %> </td>
-      <td> <%= run.comments %> </td>
-    </tr>
-    <% end %>
+    </table>
 
-  </table>
+</div>
 
-
-
-<%= link_to 'Edit User Profile', edit_user_path(@user) %> ||
-<%= link_to 'Back to Users Index', users_path %> ||
-<%= link_to 'Delete User Profile', user_path(@user),
-    method: :delete,
-    data: { confirm: 'Are you sure you want to delete your Profile? Delete is permanent.  Please confirm.'} %> ||
-<%= link_to "Post New Run", new_user_run_path(@user) %>
+<div class = 'navigation_bar'>
+    <%= link_to 'Edit User Profile', edit_user_path(@user) %> ||
+    <%= link_to 'Back to Users Index', users_path %> ||
+    <%= link_to 'Delete User Profile', user_path(@user),
+        method: :delete,
+        data: { confirm: 'Are you sure you want to delete your Profile? Delete is permanent.  Please confirm.'} %> ||
+    <%= link_to "Post New Run", new_user_run_path(@user) %>
+</div>
