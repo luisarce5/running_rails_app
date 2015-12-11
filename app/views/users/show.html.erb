@@ -12,6 +12,31 @@
 
 <%= render partial: 'users/run', collection: @user.runs %>
 
+<p> Here is the section </p>
+
+<table style = "width:100%">
+    <tr>
+      <td> <strong> Date </strong> </td>
+      <td> <strong> Distance </strong> </td>
+      <td> <strong> Duration </strong> </td>
+      <td> <strong> Route </strong> </td>
+      <td> <strong> Comments </strong> </td>
+    </tr>
+
+    <% @user.runs.each do |run| %>
+    <tr>
+      <td> <%= run.date %> </td>
+      <td> <%= run.distance %> </td>
+      <td> <%= run.duration %> </td>
+      <td> <%= run.route %> </td>
+      <td> <%= run.comments %> </td>
+    </tr>
+    <% end %>
+    
+  </table>
+
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> ||
 <%= link_to 'Back to Users Index', users_path %> ||
 <%= link_to 'Delete', user_path(@user),
